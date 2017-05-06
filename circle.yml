@@ -1,4 +1,8 @@
+machine:
+  post:
+    - pyenv global 2.7.12 3.4.4
+
 test:
     override:
-        - python -m unittest discover -v consul_lock.tests
-        - python3 -m unittest discover -v consul_lock.tests
+        - python2.7 -m unittest discover -v consul_lock.tests
+        - python3.4 -m unittest discover -v consul_lock.tests
