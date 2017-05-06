@@ -64,7 +64,6 @@ class EphemeralLock(object):
         assert self.lock_timeout_seconds >= 10 and self.lock_timeout_seconds <= 86400, \
             'lock_timeout_seconds must be between 10 and 3600 to due to Consul\'s session ttl settings'
 
-
     def acquire(self, fail_hard=True):
         """
         Attempt to acquire the lock.
