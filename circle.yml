@@ -1,6 +1,6 @@
 machine:
   post:
-    - pyenv global 2.7.12 3.4.4
+    - pyenv global 2.7.13 3.4.6 3.5.3 3.6.1
 
 dependencies:
   pre:
@@ -10,3 +10,5 @@ test:
     override:
         - python2.7 -m unittest discover -v consul_lock.tests
         - python3.4 -m unittest discover -v consul_lock.tests
+        - python3.5 -m unittest discover -v consul_lock.tests
+        - python3.6 -m unittest discover -v consul_lock.tests
