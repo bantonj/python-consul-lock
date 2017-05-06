@@ -2,6 +2,10 @@ machine:
   post:
     - pyenv global 2.7.12 3.4.4
 
+dependencies:
+  pre:
+    - pip3 install -r requirements.txt
+
 test:
     override:
         - python2.7 -m unittest discover -v consul_lock.tests
